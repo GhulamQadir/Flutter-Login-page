@@ -13,44 +13,68 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: SingleChildScrollView(
-                  child: Center(
-            child: Column(
-              children: [
-                SizedBox(height: 20,),
-                Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.cyan,
-                ),
-                SizedBox(height: 20,),
+        appBar: AppBar(
+          title: Center(child: Text("LOGIN PAGE")),
+          backgroundColor: Colors.brown,
+        ),
+        body: Center(
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+            SizedBox(height: 100,),
+            Container(
+              width: 200,
+              child: TextField()
+              ),
+              SizedBox(height: 30,),
+              Container(
+              width: 200,
+              child: TextField()
+              ),
+              SizedBox(height: 30,),
+              ElevatedButton(onPressed: (){}, child: Text("Login"))
+          ],),
+        ),
+        
+        // SingleChildScrollView(
+        //           child: Center(
+        //     child: Column(
+        //       children: [
+        //         SizedBox(height: 20,),
+        //         Container(
+        //           height: 200,
+        //           width: 200,
+        //           color: Colors.cyan,
+        //           child: Text("gq tech depar"),
+        //         ),
+        //         SizedBox(height: 20,),
               
-                Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.cyan,
-                ),
-                SizedBox(height: 20,),
-                Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.cyan,
-                ),
-                SizedBox(height: 20,),
-                Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.cyan,
-                ),
-                SizedBox(height: 20,),
-                Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.cyan,
-                ),
-                SizedBox(height: 20,),
-                ],),
-          ),
+        //         Container(
+        //           height: 200,
+        //           width: 200,
+        //           color: Colors.cyan,
+        //         ),
+        //         SizedBox(height: 20,),
+        //         Container(
+        //           height: 200,
+        //           width: 200,
+        //           color: Colors.cyan,
+        //         ),
+        //         SizedBox(height: 20,),
+        //         Container(
+        //           height: 200,
+        //           width: 200,
+        //           color: Colors.cyan,
+        //         ),
+        //         SizedBox(height: 20,),
+        //         Container(
+        //           height: 200,
+        //           width: 200,
+        //           color: Colors.cyan,
+        //         ),
+        //         SizedBox(height: 20,),
+        //         ],),
+        //   ),
         )
         
         
@@ -64,7 +88,7 @@ class MyApp extends StatelessWidget {
         //     Text("3rd row"),
         //     SizedBox(width: 20,),
         //     ],
-        )
+        
 
 
 
