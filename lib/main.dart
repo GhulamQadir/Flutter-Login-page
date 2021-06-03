@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 
@@ -13,26 +15,96 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          title: Center(child: Text("LOGIN PAGE")),
-          backgroundColor: Colors.brown,
-        ),
+        backgroundColor: Colors.blueGrey,
+        // appBar: AppBar(
+        //   title: Center(child: Text("LOGIN PAGE")),
+        //   backgroundColor: Colors.brown,
+        // ),
         body: Center(
           child: Column(
             // mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-            SizedBox(height: 100,),
-            Container(
-              width: 200,
-              child: TextField()
+              SizedBox(height: 80,),
+              Container(
+                child: Text("Registration Form",
+                style: TextStyle(fontSize: 25,
+                color: Colors.white
+                ),
+              ),
               ),
               SizedBox(height: 30,),
               Container(
-              width: 200,
-              child: TextField()
+              width: 250,
+              child: TextField(
+                decoration: InputDecoration(          
+              hintText: 'Enter Username',
+              fillColor: Colors.white, filled: true,
+              
+              border: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.white30,),
+              borderRadius: BorderRadius.circular(17),
+              ),
+              ),
+            ),
+          ),
+            SizedBox(height: 30,),
+            Container(
+              width: 250,
+              child: TextField(
+                decoration: InputDecoration(          
+              hintText: 'Enter email',
+              fillColor: Colors.white, filled: true,
+              border: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.red[100], ),
+              borderRadius: BorderRadius.circular(17)
+              ),           
+            ),
+              )
               ),
               SizedBox(height: 30,),
-              ElevatedButton(onPressed: (){}, child: Text("Login"))
+              Container(
+              width: 250,
+              child: TextField(
+                decoration: InputDecoration(          
+              hintText: 'Enter password',
+              fillColor: Colors.white, filled: true,
+              
+              border: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.white30,),
+              borderRadius: BorderRadius.circular(17),
+              ),
+              ),
+            ),
+          ),
+          SizedBox(height: 20,),
+          Container(
+            child: Text("Forget password",
+            style: TextStyle(
+                fontSize: 15,
+                color: Colors.purple[50]
+                ),),
+          ),
+              SizedBox(height: 20,),
+              Container(
+                color: Colors.greenAccent,
+              child: ElevatedButton(onPressed: (){}, child: Text("Login"),)
+              ),
+              SizedBox(height: 20,),
+              Container(
+                child: Text("Dont have an account?",
+                style: TextStyle(
+                  fontSize: 15,
+                color: Colors.black,
+                ),),
+                ),
+              SizedBox(height: 15,),
+              Container(
+                child: Text("SignUp",
+                style: TextStyle(
+                  fontSize: 15,
+                color: Colors.purple[50],
+                ),),
+                )
           ],),
         ),
         
